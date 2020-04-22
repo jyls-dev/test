@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<servlet>
+		<servlet-name>TinyGram</servlet-name>
+		<servlet-class>tinygram.TinyGramServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TinyGram</servlet-name>
+		<url-pattern>/tinygram</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TinyGramTimeline</servlet-name>
+		<servlet-class>tinygram.TinyGramTimeline</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TinyGramTimeline</servlet-name>
+		<url-pattern>/tinyline</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>IndexPopulate</servlet-name>
+		<servlet-class>tinygram.TinyGramIndexPopulate</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>IndexPopulate</servlet-name>
+		<url-pattern>/tinyindpop</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>IndexQuery</servlet-name>
+		<servlet-class>tinygram.TinyGramIndexQuery</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>IndexQuery</servlet-name>
+		<url-pattern>/tinyindquery</url-pattern>
+	</servlet-mapping>
+
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
